@@ -711,3 +711,23 @@ Processing by StudentsController#edit as HTML
 Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.1ms)
 
 
+Started PATCH "/students/7" for 93.41.127.250 at 2019-05-28 10:03:52 +0000
+Processing by StudentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"39ISBvm7GFvgIX5IKZOL/RJZ+SnUrTw6vVI2OWpqNjzgJQBNQWxovh23/50SJA9Vlep2acCUs5CWnKD+h5Aoyw==", "student"=>{"first_name"=>"Pinguino", "last_name"=>"Pinguino"}, "commit"=>"Update Student", "id"=>"7"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Unpermitted parameter: last_name
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://178.128.194.184:58712/students/7
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/students/7" for 93.41.127.250 at 2019-05-28 10:03:52 +0000
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.1ms)
+
+
